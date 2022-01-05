@@ -1,0 +1,49 @@
+[
+    {
+        "id": 0,
+        "name": "Pants",
+        "id_list": [
+            0,
+            1
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Shirt",
+        "id_list": [
+            2,
+            3,
+            4,
+            5,
+            9
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Overcoat",
+        "id_list": [
+            6
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Shorts",
+        "id_list": [
+            7
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Skirt",
+        "id_list": [
+            8
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Dress",
+        "id_list": [
+            10
+        ]
+    }
+]

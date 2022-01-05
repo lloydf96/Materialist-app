@@ -1,0 +1,150 @@
+:root {
+    --primary-color: rgb(14, 17, 151);
+    --class-color: rgb(80, 250, 37);
+
+}
+
+body{
+display: flex;
+justify-content: center;
+align-items: left;
+gap: 10px;
+flex-direction: column;
+height: 90vh;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.title-name{
+    justify-content: center;
+    align-items: center;
+    margin-left: 40em;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    color: var(--primary-color);
+    margin-left: 75px;
+    border: 3px solid var(--primary-color);
+    font-weight: bold;
+    border-radius: 1.3em;
+    height: 1.7em;
+    width: 50%;
+    text-align: center;
+    margin-top: -.2em;
+    padding-top: 0.5em;
+    display: inline-block;
+        &:hover{
+            background: var(--primary-color);
+            color:white;
+        }
+}
+
+.display_image{
+    width: 320px;
+    height: 320px;
+    border: 2px solid black;
+    background-position: center;
+    background-size: cover;
+    margin: 10px;
+    
+}  
+
+.display-segmented-img{
+    width: 320px;
+    height: 320px;
+    border: 2px solid black;
+    background-position: center;
+    background-size: cover;
+    margin: 10px;
+    
+} 
+
+.get-segments{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+
+}
+
+.submit-button{
+display: none;
+}
+
+input[type="submit"]{
+    color: var(--primary-color);
+    margin-left: 85px;
+    border: 3px solid var(--primary-color);
+    font-weight: bold;
+    border-radius: 2em;
+    font-size: 0.9em;
+    height: 3em;
+    width: 45%;
+    text-align: center;
+    margin-top: -.3em;
+    padding-top: 0.5em;
+    display: inline-block;
+        &:hover{
+            background: var(--primary-color);
+            color:white;
+        }
+}
+
+
+
+.get-segmented-class {
+    margin: 1em 1em;
+    padding-left: 2em;
+    padding-top: 4em;
+}
+    
+.class-list {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    position: unset;
+    height: auto;
+    width: 100%;
+    
+
+    li{
+        margin: 10px;
+        background: var(--class-color);
+        border-radius: 1.3em;
+        height: 1.7em;
+        width: 6em;
+        cursor: pointer;
+        text-align: center;
+        margin-top: -.2em;
+        padding-top: 0.5em;
+        display: inline-block;
+        
+
+        a{
+            color: black;
+            justify-items: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+
+    }
+}
+
+
+
+
+
+
+   
+        

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Fashion Instance Segmentation</title>
+
+</head>
+<body>
+    <section class="title">
+        <div class="title-name">
+            <h1>Instance Segmentation:</h1>
+            
+        </div>
+    
+    </section>
+    <section class="segment-img-section">
+    <div class="container">
+        <div class="upload-image">
+            <div class="upload-buttons-class">
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <label class="custom-file-upload" id="custom-file-upload">
+                        
+                        <input type="file" id="upload-image-id" name="upload-image-id" accept="image/png, image/jpg, image/jpeg"/>
+                        Upload Image
+                    </label>
+                    <input type="hidden" name="btn_identifier" value="upload-btn-id" />
+                    <div class="submit-button">
+                        <input type="submit" id="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+
+            <div class="display_image">
+                {% if uploaded_image %}
+            
+                <img src="{{ url_for('static', filename= uploaded_image ) }}" alt="Uploaded Image" class="left-img" width="320" height="320">
+            
+                    {% endif %}
+
+             </div>
+        </div>
+        
+        <div class="get-segments">
+
+            <div class="get-segmented-img">
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="btn_identifier" value="segment-btn-id" />
+                    <input type="submit" class="segment-image-btn" id="segment-image-btn" value="Find Clothes!"/>
+
+                    
+                </form>
+
+                <div class="display-segmented-img">
+                   
+                    {% if segmented_image %}
+            
+                    <img src="{{ url_for('static', filename=segmented_image ) }}" class="right-img" alt="Segmented Image" width="320" height="320">
+            
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            <div class="get-segmented-class">
+                {% if class_list%}
+                <h3>Found the following classes</h3>
+                <ul class="class-list"> 
+
+                    {% for class in class_list%}
+                    
+                    <li >
+                        <a href="#">{{class}}</a>
+                    </li>
+                    {% endfor %}
+                    
+                </ul>
+                {% endif %}
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+    const image_input = document.querySelector("#upload-image-id");
+    
+    image_input.addEventListener("change", function(){
+        document.getElementById("submit").click();
+    });  
+
+
+       
+</script>
+
+<!-- <script>
+    const image_input = document.querySelector("#upload-image-id");
+    var uploaded_image = "";
+    image_input.addEventListener("change", function(){
+        const reader = new FileReader();
+        reader.addEventListener("load", () => {
+            uploaded_image=reader.result;
+            document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`
+        });
+        reader.readAsDataURL(this.files[0]);
+        
+    })
+       
+</script> -->
+
+</body>
+</html>
+

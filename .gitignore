@@ -1,0 +1,5 @@
+venv/*
+model/model.h5py
+dummy/*
+model/.ipynb_checkpoints/*
+model/__pycache__/*
